@@ -2,15 +2,15 @@
 using namespace std;
 #define n 100
 class Stack{
-
-public:
-    int* arr;
+	int* arr;
 	int top;
+public:
+// constructor function
 	Stack(){
-		arr = new int[n];
-		top = -1;
+	arr = new int[n];
+	top = -1;
 	}
-	
+	// Function for putting elements in the stack
 	void push(int value){
 	if (top == n-1){
 		cout<<"Stack over-flow"<<endl;
@@ -20,7 +20,7 @@ public:
 		top++;
 		arr[top] = value;
 	}
-	
+	// geting top means last element of the stack
 	void pop(){
 	if( top == -1){
 		cout<<"Stack is empty "<<endl;
@@ -28,7 +28,7 @@ public:
 	
 		top--;
 	}
-	
+	// Gettting top element from the stack
 	int Top(){
 		if (top == -1){
 		cout<<"NO element at top"<<endl;
@@ -36,6 +36,7 @@ public:
 	}
 		return arr[top];
 	}
+	// Checking either stack is empty or not
 	bool empty(){
 		return top == -1;
 	}

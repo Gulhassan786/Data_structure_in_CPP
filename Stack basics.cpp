@@ -16,8 +16,9 @@ public:
 		cout<<"Stack over-flow"<<endl;
 		return;
 	}
-	
+		
 		top++;
+		
 		arr[top] = value;
 	}
 	// geting top means last element of the stack
@@ -45,12 +46,16 @@ public:
 
 int main(){
 	Stack stk;
+	// Pushing element to the stack
 	stk.push(2);
 	stk.push(4);
 	stk.push(5);
+	// printing the top element of the stack
 	cout<<stk.Top()<<endl;
+	// removing the last ined elment from the stack
 	stk.pop();
 	cout<<stk.Top()<<endl;
+	// checking stack is empty or not
 	cout<<stk.empty()<<endl;
 	return 0;
 }
